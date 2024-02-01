@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Django</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'youtube/style2.css' %}">
+</head>
+
+<body>
+    <h3>Youtube Unilingo project!</h3>
+    <form method="post">
+      {% csrf_token %}
+      <table>{{ form.as_p }}</table>
+      <button type="submit" id="formButton">Get data</button>
+    </form>
+    <p><b>Video title:</b> {{ title }}</p>
+    <p><b>View count:</b> {{ viewCount }}</p>
+    <p><b>Last comment:</b> {{ comment }}</p>
+    <button onClick="window.location.reload();">Update views and latest comment</button>
+    <br>
+    <br>
+    <p><b>Audio from 0:30 to 0:45:</b></p>
+    <audio controls>
+        <source src={{mp3_path}} type="audio/mpeg">
+    </audio>
+    <p><b>Spanish translation text:</b></p>
+    <p>{{spanishText}}</p>
+    <p><b>Spanish translation audio:</b></p>
+    <audio controls>
+        <source src={{speechPath}} type="audio/mpeg">
+    </audio>
+    <br>
+    <p><b>Thumbnail:</b> <a href={{thumbnailFile}} download="thumbnail.jpg"><button>Download Thumbnail</button></a></p>
+    <br>
+    <img src={{thumbnail}} alt="Thumbnail" />
+
+<!--    <p><b>Text of image:</b> {{ ocr }}</p>-->
+    <p><b>Text of image:</b> <code>{{ ocr }}</code></p>
+
+</body>
+</html>

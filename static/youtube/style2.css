@@ -1,0 +1,54 @@
+:root {
+  /* Darkened Brown Orange Palette */
+  --primary-color: #6E4223; /* Darkened Brown */
+  --secondary-color: #CC7A00; /* Darkened Orange */
+
+  /* Additional Light Blue */
+  --light-blue: #ADD8E6;
+
+  /* Background and Text Colors */
+  --background-color: #FFF3E0; /* Lighter Cornsilk */
+  --body-color: #2F4F4F; /* Dark Slate Gray */
+}
+
+/* Global Styles */
+body {
+  background-color: var(--background-color);
+  color: var(--body-color);
+}
+
+/* Button Styles */
+button {
+  background-color: var(--primary-color);
+  color: white; /* Text color set to white */
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #4A2B17; /* Slightly darker shade of brown */
+}
+
+/* Paragraph Styles */
+p {
+  line-height: 1.5;
+}
+
+/* Bold Text Styles */
+b {
+  color: var(--primary-color);
+}
+
+/* Heading Level 3 Styles */
+h3 {
+  color: var(--secondary-color);
+}
+
+/* Example of Light Blue */
+.example-element {
+  background-color: var(--light-blue);
+  padding: 10px;
+  border-radius: 5px;
+}
